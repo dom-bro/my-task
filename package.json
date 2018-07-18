@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:modern": "vue-cli-service build --modern",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint && eslint --fix ."
   },
   "dependencies": {
     "element-ui": "^2.4.4",
@@ -17,6 +17,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
     "@vue/cli-service": "^3.0.0-beta.15",
     "@vue/eslint-config-standard": "^3.0.0-rc.3",
+    "colors": "^1.3.0",
     "eslint": "^5.1.0",
     "eslint-plugin-vue": "^4.7.0",
     "husky": "^1.0.0-rc.13",
@@ -30,7 +31,8 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "vue-cli-service lint"
+      "pre-commit": "vue-cli-service lint && eslint --fix .",
+      "commit-msg": "node ./githooks/commit-msg"
     }
   }
 }
