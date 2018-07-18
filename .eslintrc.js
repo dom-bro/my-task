@@ -8,8 +8,8 @@ module.exports = {
     '@vue/standard'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    // 'vue/no-parsing-error': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'vue/no-parsing-error': 0,
     'comma-dangle': 0,
   },
   parserOptions: {

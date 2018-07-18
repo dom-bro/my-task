@@ -10,7 +10,7 @@
     <router-link to="/category/1/book1">Go to /category/1/book1</router-link>
     <router-link to="/category/1/book2">Go to /category/1/book2</router-link>
     <router-link to="/category/2">Go to /category/2</router-link>
-    <a href="javascript:" @click="open('/bar')">编程式导航</a>
+    <a href="javascript:" @click=open("/bar")>编程式导航</a>
     <router-view></router-view>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     open (url) {
       const vm = this
       vm.$router.push(url)
-    }
+    },
   }
 }
 </script>
