@@ -9,9 +9,7 @@ import router from './router'
 Vue.use(VueRouter)
 Vue.use(ElementUI)
 
-Vue.config.productionTip = false
-
 new Vue({
   render: h => h(Home),
-  router
+  router,
 }).$mount('#app')
