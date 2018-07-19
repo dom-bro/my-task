@@ -9,7 +9,8 @@
 <script>
 export default {
   created () {
-    console.log(1)
+    const vm = this
+    console.log(vm.$store.state.count)
   },
 }
 </script>

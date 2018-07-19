@@ -1,3 +1,19 @@
+# 🚀 项目启动
+
+Yarn (推荐)
+
+```bash
+yarn
+yarn serve
+```
+
+npm
+
+```bash
+npm i
+npm run serve
+```
+
 # 🚫 💩 Code Lint
 
 > Always run linters against staged git files and don't let 💩 slip into your code base 😄!
@@ -32,3 +48,33 @@ Only for `*.vue`
 commit： 执行 commit 命令时会自动执行 lint 格式化代码（不要在 commit 命令后  使用 `--no-verify` 跳过  格式检查）
 
 commit-msg： commit 时备注的提交信息至少 5 个字符 😏
+
+# 【以下可以略过】增加开发幸福指数 😂
+
+## 🚘 IDE 配置
+
+### Visual Studio Code
+
+1.  安装 ESLint 插件
+
+自定义配置添加
+
+```js
+"eslint.autoFixOnSave": true,
+```
+
+2.  安装 Vetur 插件
+
+自定义配置添加
+
+```js
+"vetur.validation.template": false,
+"eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+        "language": "vue",
+        "autoFix": true
+    }
+],
+```
