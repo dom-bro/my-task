@@ -1,16 +1,5 @@
 <template>
   <div>
-    <el-button>el-ui</el-button>
-    <img>
-
+    <el-button @click="open('/foo')">el-ui</el-button>
   </div>
 </template>
-
-<script>
-export default {
-  created () {
-    const vm = this
-    console.log(vm.$store.state.count)
-  },
-}
-</script>
