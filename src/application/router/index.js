@@ -1,18 +1,19 @@
-const Home = () => import('@/src/views/Home')
+import Home from '@/src/views/Home'
 
 let url
+const X = '/x/' // 通配路由
 const routes = [
   {
-    path: '*',
+    path: `${X}*`,
     async component () {
       try {
-        return await import(`@/${url}`)
+        return await import(`@/src/views/x/${url}`)
       } catch (e) {
         return import('@/src/views/404')
       }
     },
     beforeEnter (to, from, next) {
-      url = to.path.substr(1)
+      url = to.path.substr(X.length)
       next()
     },
   },
