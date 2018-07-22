@@ -1,7 +1,12 @@
 const fs = require('fs')
 const path = require('path')
+const sqlite3 = require('sqlite3').verbose()
+const db = new sqlite3.Database(path.join(__dirname, '../../database/sql.db'))
+// db.run(`create table tableA(name text)`)
+console.log(db.run('.tables'))
 
 module.exports = router => {
+  router.get('/api/sqlite', async (ctx, next) => {})
   router.get('/api/createTask', async (ctx, next) => {
     ctx.type = 'json'
 
