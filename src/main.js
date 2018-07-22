@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 
-import store from '@/src/application/store'
-import mixin from '@/src/application/mixin'
-import router from '@/src/application/router'
+import store from '@/src/client/store'
+import mixin from '@/src/client/mixin'
+import router from '@/src/client/router'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
