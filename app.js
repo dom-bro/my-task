@@ -2,7 +2,7 @@ const Koa = require('koa')
 const app = new Koa()
 const logger = require('koa-logger')
 
-const router = require('./src/server')
+const router = require('./src/server/api')
 
 app.use(logger())
 app.use(router.routes())

@@ -1,47 +1,32 @@
-const fs = require('fs')
-const path = require('path')
-const sqlite3 = require('sqlite3').verbose()
-const db = new sqlite3.Database(path.join(__dirname, '../../database/sql.db'))
-// db.run(`create table tableA(name text)`)
-console.log(db.run('.tables'))
+const db = require('../utils/db')
+const tasks = db.connect('tasks.json')
 
 module.exports = router => {
-  router.get('/api/sqlite', async (ctx, next) => {})
+  router.get('/api/tasks', async (ctx, next) => {
+    ctx.type = 'json'
+    ctx.body = tasks
+  })
   router.get('/api/createTask', async (ctx, next) => {
     ctx.type = 'json'
+    tasks
+      .push({
+        title: 'hello',
+        status: 'draft',
 
-    const tasks = require('../../database/tasks')
+        wiki: [],
+        ui: ['dfs'],
+        api: [],
 
-    tasks.push({
-      title: 'hello',
-      status: 'draft',
+        publish: [],
 
-      wiki: [],
-      ui: ['dfs'],
-      api: [],
-
-      publish: [],
-
-      branch: '',
-      backend: '',
-      qa: '',
-    })
-
-    const res = fs.writeFileSync(
-      path.join(__dirname, '../../database/tasks.json'),
-      JSON.stringify(tasks, null, 2)
-    )
-
-    console.log(res)
+        branch: '',
+        backend: '',
+        qa: '',
+      })
+      .write()
 
     ctx.body = {
       success: true,
     }
-  })
-  router.get('/api/getTasks', async (ctx, next) => {
-    ctx.type = 'json'
-
-    ctx.body = require('../../database/tasks')
-    next()
   })
 }
