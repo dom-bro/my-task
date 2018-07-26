@@ -40,22 +40,68 @@
           <el-form-item label="分支">
             <el-input></el-input>
           </el-form-item>
+          <el-form-item label="排期">
+            <el-input></el-input>
+          </el-form-item>
 
           <el-form-item label="源文件">
             <el-input type="textarea" autosize></el-input>
           </el-form-item>
 
-          <el-form-item label="后端人员">
-            <el-input></el-input>
-          </el-form-item>
-          <el-form-item label="测试人员">
-            <el-input></el-input>
-          </el-form-item>
+          <div class="block">
+            <el-form-item label="后端人员">
+              <el-input></el-input>
+            </el-form-item>
+            <el-form-item label="测试人员">
+              <el-input></el-input>
+            </el-form-item>
+            <el-form-item label="设计人员">
+              <el-input></el-input>
+            </el-form-item>
+          </div>
+
           <el-form-item>
-            <el-button type="primary">Save</el-button>
+            <el-button type="primary" @click="submitNewForm">Save</el-button>
           </el-form-item>
         </el-form>
       </el-tab-pane>
     </el-tabs>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    data () {
+      return {
+        nForm: {
+          title: '',
+          status: 'draft',
+          doc: {
+            requirements: '',
+            ui: '',
+            api: '',
+          },
+          publish: '',
+          branch: '',
+          schedule: '',
+          codes: '',
+          workmate: {
+            backend: '',
+            qa: '',
+            ui: '',
+          },
+        },
+      }
+    },
+    submitNewForm () {},
+  },
+  created () {},
+}
+</script>
+
+<style lang="scss">
+.block {
+  border: 1px solid red;
+}
+</style>
