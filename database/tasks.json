@@ -1,57 +1,59 @@
 [
   {
-    "title": "hello",
+    "title": "",
     "status": "draft",
-    "wiki": [],
-    "ui": ["dfs"],
-    "api": [],
-    "publish": [],
+    "doc": {
+      "pm": "",
+      "ui": "",
+      "api": ""
+    },
+    "publish": "",
     "branch": "",
-    "backend": "",
-    "qa": ""
+    "schedule": "",
+    "codes": "",
+    "workmate": {
+      "pm": "",
+      "ui": "",
+      "api": "",
+      "qa": ""
+    }
   },
   {
-    "title": "hello",
+    "title": "",
     "status": "draft",
-    "wiki": [],
-    "ui": ["dfs"],
-    "api": [],
-    "publish": [],
+    "doc": {
+      "pm": "",
+      "ui": "",
+      "api": ""
+    },
+    "publish": "",
     "branch": "",
-    "backend": "",
-    "qa": ""
+    "schedule": "",
+    "codes": "",
+    "workmate": {
+      "pm": "",
+      "ui": "",
+      "api": "",
+      "qa": ""
+    }
   },
   {
-    "title": "hello",
-    "status": "draft",
-    "wiki": [],
-    "ui": ["dfs"],
-    "api": [],
-    "publish": [],
+    "title": "sdfd",
+    "status": "qa",
+    "doc": {
+      "pm": "dsfd",
+      "ui": "",
+      "api": "sfd"
+    },
+    "publish": "",
     "branch": "",
-    "backend": "",
-    "qa": ""
-  },
-  {
-    "title": "hello",
-    "status": "draft",
-    "wiki": [],
-    "ui": ["dfs"],
-    "api": [],
-    "publish": [],
-    "branch": "",
-    "backend": "",
-    "qa": ""
-  },
-  {
-    "title": "hello",
-    "status": "draft",
-    "wiki": [],
-    "ui": ["dfs"],
-    "api": [],
-    "publish": [],
-    "branch": "",
-    "backend": "",
-    "qa": ""
+    "schedule": "",
+    "codes": "",
+    "workmate": {
+      "pm": "",
+      "ui": "",
+      "api": "",
+      "qa": ""
+    }
   }
 ]
