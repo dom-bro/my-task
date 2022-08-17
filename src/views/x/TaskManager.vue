@@ -16,7 +16,7 @@
 <script>
 import NewTask from './NewTask.vue'
 export default {
-  comments: {
+  components: {
     NewTask,
   },
 }

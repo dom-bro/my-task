@@ -7,13 +7,6 @@ yarn
 yarn serve
 ```
 
-npm
-
-```bash
-npm i
-npm run serve
-```
-
 # 🚫 💩 Code Lint
 
 > Always run linters against staged git files and don't let 💩 slip into your code base 😄!
